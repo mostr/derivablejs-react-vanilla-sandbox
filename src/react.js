@@ -10,13 +10,13 @@ let App = reactive((props) => {
 
 
 let EmailsList = ({emails, onEmailClick, onLoadClick}) => {
-  if(!emails.length) {
-    return <p>No emails <button onClick={onLoadClick}>Load'em</button> </p>
+  if (!emails.length) {
+    return <p>No emails <button onClick={onLoadClick}>Load'em</button></p>
   }
   return (
     <ul>
       {emails.map(email => <EmailItem key={email.id} email={email} onClick={onEmailClick}/>)}
-    </ul>   
+    </ul>
   );
 };
 
